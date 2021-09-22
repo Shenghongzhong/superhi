@@ -1,5 +1,6 @@
-from art import make_art
+from art import Artwork
 import  os
+
 
 print("Generating images")
 #first 255 is bold red
@@ -8,7 +9,7 @@ print("Generating images")
 #fourth255 is full alpha transparency
 os.makedirs('exports',exist_ok=True)
 
-
 filepath = os.path.join('exports', "export.png")
-make_art(filepath)
+art = Artwork((2000,2000))
+art.save_to_file(filepath)
 

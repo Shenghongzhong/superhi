@@ -1,4 +1,4 @@
-from art import make_art
+from art import Artwork
 import  os
 
 print("Generating images")
@@ -10,5 +10,8 @@ os.makedirs('test',exist_ok=True)
 
 for i in range(1,11):
     filepath = os.path.join('test',f"test-{i}.png")
-    make_art(filepath)
+
+    grain = i * 0.1
+    art = Artwork()
+    art.save_to_file(filepath)
 
